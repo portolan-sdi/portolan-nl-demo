@@ -10,7 +10,7 @@ jobs:
     permissions:
       contents: write
     env:
-      SB_pathPrefix: "/"
+      SB_pathPrefix: "/portolan-nl-demo/"
       SB_historyMode: "hash"
     steps:
       - uses: actions/checkout@v6

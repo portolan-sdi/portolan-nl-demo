@@ -1,8 +1,8 @@
 export default {
-    catalogUrl: null,
-    catalogTitle: "Portolan Browser",
+    catalogUrl: "https://data.source.coop/cholmes/portolan-nl/catalog.json",
+    catalogTitle: "Portolan NL",
     catalogImage: "/portolan-logo.svg",
-    allowExternalAccess: true, // Must be true if catalogUrl is not given
+    allowExternalAccess: false,
     allowedDomains: [],
     detectLocaleFromBrowser: true,
     storeLocale: true,

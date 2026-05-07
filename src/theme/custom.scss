@@ -2,9 +2,8 @@
 
 #stac-browser {
   > header .site {
-    border-bottom-width: 2px;
-    border-bottom-color: $primary;
-    background-color: #fafbfc;
+    border-bottom: 3px solid #11394e;
+    background-color: #f7f9fb;
   }
 
   > header .page {
@@ -12,12 +11,12 @@
     padding-bottom: 0.5rem;
 
     h1 {
-      color: #202a4f;
+      color: #11394e;
     }
   }
 
   h2 {
-    color: #202a4f;
+    color: #11394e;
     font-weight: 700;
     letter-spacing: -0.01em;
   }
@@ -28,19 +27,18 @@
     transition: box-shadow 0.15s ease, border-color 0.15s ease;
 
     &:hover {
-      border-color: rgba(65, 99, 204, 0.3);
-      box-shadow: 0 2px 8px rgba(65, 99, 204, 0.1);
+      border-color: rgba(0, 154, 237, 0.25);
+      box-shadow: 0 2px 8px rgba(0, 154, 237, 0.1);
     }
   }
 
   .catalog-card .card-title {
-    font-family: "Archivo", sans-serif;
     font-weight: 600;
     font-size: 1.05rem;
   }
 
   .catalog-card .intro {
-    color: #343e63;
+    color: #2b4259;
     font-size: 0.875rem;
     line-height: 1.6;
   }
@@ -54,13 +52,13 @@
   }
 
   > footer {
-    border-top: 1px solid #d4d8e8;
+    border-top: 1px solid #e7e7ed;
     padding-top: 1rem;
     margin-top: 1rem;
   }
 
   .description {
-    color: #343e63;
+    color: #2b4259;
     line-height: 1.7;
   }
 

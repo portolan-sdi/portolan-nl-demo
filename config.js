@@ -1,7 +1,7 @@
 export default {
     catalogUrl: "https://data.source.coop/cholmes/portolan-nl/catalog.json",
     catalogTitle: "Portolan NL",
-    catalogImage: "/portolan-logo.svg",
+    catalogImage: "/rijksoverheid.png",
     allowExternalAccess: false,
     allowedDomains: [],
     detectLocaleFromBrowser: true,

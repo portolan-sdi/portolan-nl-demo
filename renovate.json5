@@ -1,0 +1,19 @@
+// Repo exceptions to the org Renovate policy in
+// portolan-sdi/portolan-ops/renovate/default.json5.
+{
+  $schema: "https://docs.renovatebot.com/renovate-schema.json",
+  packageRules: [
+    {
+      // The Playwright test job runs in the Playwright image. The image tag
+      // and the npm package must move together, or the browsers no longer
+      // match the test runner.
+      groupName: "playwright",
+      matchPackageNames: [
+        "@playwright/test",
+        "playwright",
+        "playwright-core",
+        "mcr.microsoft.com/playwright",
+      ],
+    },
+  ],
+}

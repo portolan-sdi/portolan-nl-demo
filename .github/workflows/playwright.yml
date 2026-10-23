@@ -13,6 +13,14 @@ jobs:
   test:
     timeout-minutes: 10
     runs-on: ubuntu-latest
+    # The image ships the browsers and their system packages. The apt step
+    # that `playwright install --with-deps` runs stalled on the runner's
+    # mirror on every run and hit the timeout. Keep the tag on the
+    # @playwright/test version in package-lock.json. renovate.json5 bumps both
+    # in one pull request.
+    container:
+      image: mcr.microsoft.com/playwright:v1.59.1-noble
+      options: --user 1001
     
     steps:
     - name: Checkout code
@@ -26,18 +34,13 @@ jobs:
     - name: Cache dependencies
       uses: actions/cache@v5
       with:
-        path: |
-          ~/.npm
-          ~/.cache/ms-playwright
+        path: ~/.npm
         key: ${{ runner.os }}-playwright-${{ hashFiles('**/package-lock.json') }}
         restore-keys: |
           ${{ runner.os }}-playwright-
     
     - name: Install dependencies
       run: npm ci
-    
-    - name: Install Playwright Browsers
-      run: npx playwright install --with-deps chromium
     
     - name: Run Playwright tests
       run: npx playwright test
